@@ -1,0 +1,128 @@
+.sidebar {
+  width: 80px;
+  padding: 1rem 0.5rem;
+  height: 100vh;
+  overflow-y: auto;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+  transition: width 0.6s ease, transform 0.6s ease;
+}
+
+.sidebar.expanded {
+  width: 250px;
+}
+
+.sidebar:not(.expanded) {
+  transform: translateX(0);
+}
+
+.animalList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.animalItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.6rem 0.5rem;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.animalItem:hover {
+  background-color: #bfd3cd;
+}
+
+.animalImage {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.animalName {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #333;
+  margin-left: 0;
+  transition: opacity 0.4s ease, max-width 0.4s ease, margin-left 0.4s ease;
+  display: inline-block;
+}
+
+.sidebar.expanded .animalName {
+  opacity: 1;
+  max-width: 200px;
+  margin-left: 10px;
+}
+
+.active {
+  border-bottom: 2px solid red;
+  font-weight: bold;
+}
+
+/* Responsive tablets */
+@media (max-width: 768px) {
+  .animalName {
+    font-size: 14px;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100px;
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.expanded {
+    width: 250px;
+  }
+
+  .animalImage {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sidebar.expanded .animalName {
+    max-width: 120px;
+  }
+}
+
+/* Responsive phones */
+@media (max-width: 480px) {
+  .animalName {
+    font-size: 14px;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100px;
+  }
+
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebar.expanded {
+    width: 140px;
+  }
+
+  .animalImage {
+    width: 28px;
+    height: 28px;
+  }
+
+  .sidebar.expanded .animalName {
+    max-width: 100px;
+    font-size: 0.85rem;
+  }
+}

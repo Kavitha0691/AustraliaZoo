@@ -1,0 +1,87 @@
+.animalCard {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem 2rem;
+  width: 100%;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.closeBtn:hover {
+  background-color: #e04646;
+}
+
+.animalName {
+  margin: 0 0 0.75rem;
+  font-size: 1.75rem;
+  color: #222;
+}
+
+.animalDesc {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.animalInfo {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.categoryLink {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.categoryLink:hover {
+  color: #217dbb;
+  text-decoration: underline;
+}
+
+.readMoreBtn {
+  margin-top: 1.25rem;
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background-color: #217dbb;
+}
+
+.animalImg {
+  width: 60%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.animalImg:hover {
+  transform: scale(1.05);
+}

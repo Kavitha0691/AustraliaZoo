@@ -1,0 +1,170 @@
+.homeLayout {
+  display: flex;
+  height: 80vh;
+  flex-direction: row;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.hero {
+  text-align: center;
+  background-image: url('/assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 15rem;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background-color: #007850;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #005a3a;
+}
+
+.sideBySideSections {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 180px;
+}
+
+.infoSection {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6rem 5rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.infoSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.infoSection p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .homeLayout {
+    flex-direction: row;
+  }
+
+  .mainContent {
+    padding: 1.5rem;
+    margin-top: 0;
+  }
+
+  .hero {
+    background-position: center;
+    margin-top: 0;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .sideBySideSections {
+    flex-direction: row;
+    padding: 1rem;
+    height: 50vh;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  .infoSection {
+    padding: 3rem 1rem;
+  }
+
+  .infoSection h2 {
+    font-size: 2rem;
+  }
+
+  .infoSection p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+    height: 70vh;
+  }
+
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .infoSection {
+    padding: 2rem 1rem;
+  }
+
+  .infoSection h2 {
+    font-size: 1.6rem;
+  }
+
+  .infoSection p {
+    font-size: 1rem;
+  }
+
+  .sideBySideSections {
+    flex-direction: column;
+  }
+}

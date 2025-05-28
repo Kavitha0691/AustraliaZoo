@@ -1,0 +1,66 @@
+.sliderContainer {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 2rem;
+}
+
+.slide {
+  flex: 0 0 auto;
+  min-width: 300px;
+  text-align: center;
+}
+
+.slide img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+  text-align: center;
+  margin-top: 0.25rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Media Query: Tablets and below */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 220px;
+  }
+
+  .slide img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .caption {
+    font-size: 0.85rem;
+  }
+}
+
+/* Media Query: Phones */
+@media (max-width: 480px) {
+  .slide {
+    min-width: 160px;
+  }
+
+  .slide img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+  }
+}

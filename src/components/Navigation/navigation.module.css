@@ -1,0 +1,99 @@
+.navbar {
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eef3ec;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(225, 224, 224, 0.77);
+  z-index: 1000;
+}
+
+.navLinks li  {
+  cursor: pointer;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.navLinks li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.8s ease-in-out;
+  margin-top: 5px;
+}
+
+
+.navLinks li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+.navLinks li a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navLinks.showMenu:focus {
+  outline: none;
+  border: none;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.7s ease-in-out;
+  }
+
+  .navLinks.showMenu {
+    transform: translateX(0);
+
+  }
+}
