@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Sidebar.module.css";
+import styles from "./sideBar.module.css";
 import { getImageUrl } from "../../utils/function.js";
 
 const Sidebar = ({ animals, onAnimalClick, activeAnimal }) => {
