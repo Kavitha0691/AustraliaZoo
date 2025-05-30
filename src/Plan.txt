@@ -3,7 +3,6 @@ Header Component:
     Displays the zoo logo and main title ("Australia Zoo") side by side.
     Uses a separate Logo component to render the logo image.
     Imports logo image and applies CSS modules for styling.
-    Includes Navigation component for site links.
     Header styled for consistent look and responsive layout.
 
 Navigation Component:
