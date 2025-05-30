@@ -10,12 +10,12 @@ const AnimalCard = ({ animal, onClose, onReadMore }) => {
       <button onClick={onClose} className={styles.closeBtn}>
         Close
       </button>
+      <h2 className={styles.animalName}>{animal.name}</h2>
       <img
         className={styles.animalImg}
         src={getImageUrl(animal.img_url)}
         alt={animal.name}
       />
-      <h2 className={styles.animalName}>{animal.name}</h2>
       <p className={styles.animalDesc}>{shortDesc}</p>
       <p className={styles.animalInfo}>
         <strong>Diet:</strong> {animal.diet}

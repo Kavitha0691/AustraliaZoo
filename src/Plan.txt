@@ -1,0 +1,97 @@
+Header Component:
+----------------------
+    Displays the zoo logo and main title ("Australia Zoo") side by side.
+    Uses a separate Logo component to render the logo image.
+    Imports logo image and applies CSS modules for styling.
+    Includes Navigation component for site links.
+    Header styled for consistent look and responsive layout.
+
+Navigation Component:
+------------------------
+    Contains navigation links including “Home” and animal categories dynamically imported from data.
+    Uses React state to manage open/close state for mobile hamburger menu.
+    Highlights hovered and clicked links with different styles.
+    Uses NavLink from react-router-dom for navigation with active link styling.
+    Includes a HamburgerMenu component to toggle the navigation on smaller screens.
+    Supports closing the menu when a link is clicked.
+    Styled with CSS modules to create a responsive and accessible navigation bar.
+
+Sidebar Component:
+-------------------------
+    Displays a vertical list of animal items with small images and names.
+    Expands to show animal names when hovered or when an animal is selected (active).
+    Uses React state to track whether the sidebar is hovered.
+    Highlights the active animal with distinct styling.
+    Calls a callback function when an animal is clicked to update the active animal.
+    Images are loaded using a utility function for consistent URL handling.
+    Styled with CSS modules to handle compact and expanded states smoothly.
+
+AnimalDetail Component:
+---------------------------
+    Displays detailed information about a selected animal in an overlay modal.
+    Shows the animal’s name, full-size image, extended description, diet, and category.
+    Includes "Read Less" and "Close" buttons to reduce detail view or close the modal.
+    Only renders if an animal object is provided (animal prop).
+    Uses utility function to get the image URL.
+    Styled using CSS modules for a modal-style overlay and layout.
+
+AnimalCard Component:
+--------------------------
+    Represents a compact card layout for an individual animal.
+    Displays the animal’s name, image, short description, diet, and category.
+    Category is a clickable link that routes to its specific category page.
+    Includes "Read More" button to trigger detailed view and a "Close" button to hide the card.
+    Short description is trimmed to 200 characters with ellipsis.
+    Image is loaded via a helper function for consistency.
+    Styled using CSS modules for clean, card-based UI.
+
+Home page:
+-------------
+    Displays the main landing view of the zoo website.
+    Imports and uses Sidebar to show a vertical list of all animals.
+    Uses animalsData to feed animal information.
+    Uses AnimalCard to show a short preview of selected animal.
+    Uses AnimalDetail to show full description when user clicks “Read More”.
+    Includes a hero section with welcome message and call-to-action when no animal is selected.
+    Includes two side-by-side information sections:(with background img and small message)
+    These sections animated with Framer Motion (motion.div).
+    Dynamically loads background images using getImageUrl().
+    Manages component logic using useState():
+    activeAnimal — currently selected animal
+    showDetail — toggle between card view and full detail
+    Hero and info sections hidden when an animal is selected.
+   Layout styled using CSS Modules from home.module.css.
+
+GroupPage:
+------------
+ Purpose:
+    Displays a collection of animal cards based on a specific category (group) like mammals, birds, reptiles, etc.
+
+ Routing:
+    Uses React Router's dynamic route (e.g., /mammals, /birds) to determine which group to display.
+    Retrieves the category from the URL using useParams()=> (to avoid repeating <Route> for every category and more maintainable if we add more categories later).
+
+ Data Handling:
+    Filters the animals data array to only include animals that match the selected category.
+    Passes each filtered animal to an AnimalCard component.
+
+ UI Behavior:
+    Renders a list of AnimalCard components.
+    May include a title/header showing the current group name.
+    Allows interaction through Read More to show detailed animal info using the AnimalDetail component.
+
+ Styling:
+    Responsive flexbox layout.
+    Each card styled consistently (CSS Modules).
+    
+
+
+
+
+
+
+
+
+
+
+

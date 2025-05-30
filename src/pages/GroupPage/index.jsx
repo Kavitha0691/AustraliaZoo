@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { animalsData, categoryInfo, defaultCategoryInfo } from "../../data/data";
 import Sidebar from "../../components/Sidebar";
@@ -8,7 +9,9 @@ import { getImageUrl } from "../../utils/function.js";
 import styles from "./groupPage.module.css";
 import Slideshow from "../../components/Slideshow/index.jsx";
 
-const GroupPage = ({ category }) => {
+const GroupPage = () => {
+  const { category } = useParams();
+
   const [selectedAnimal, setSelectedAnimal] = useState(null);
   const [showCardDetail, setShowCardDetail] = useState(false);
   const [showBigDescription, setShowBigDescription] = useState(false);

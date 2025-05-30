@@ -12,9 +12,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/mammals" element={<GroupPage category="Mammals" />} />
+        {/* <Route path="/mammals" element={<GroupPage category="Mammals" />} />
         <Route path="/birds" element={<GroupPage category="Birds" />} />
-        <Route path="/reptiles" element={<GroupPage category="Reptiles" />} />
+        <Route path="/reptiles" element={<GroupPage category="Reptiles" />} /> */}
+
+        <Route path="/:category" element={<GroupPage />} />
+
       </Routes>
       <Footer />
     </>

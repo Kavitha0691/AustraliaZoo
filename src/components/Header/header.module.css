@@ -1,3 +1,7 @@
+.header {
+  z-index: 1100;
+}
+
 .logoImg:hover {
   transform: scale(1.05); 
   filter: invert(0.8) sepia(0.5) saturate(6) hue-rotate(10deg);
