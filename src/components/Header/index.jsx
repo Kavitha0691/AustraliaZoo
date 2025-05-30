@@ -11,7 +11,6 @@ const Header = () => {
         <Logo />
         <h1 className={styles.h1}> Australia Zoo</h1>
       </div>
-      <Navigation />
     </header>
   );
 };

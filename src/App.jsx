@@ -1,26 +1,17 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import GroupPage from "./pages/GroupPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Layout from "./layout/Layout.jsx"
 
 function App() {
   return (
-    <>
-      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/mammals" element={<GroupPage category="Mammals" />} />
-        <Route path="/birds" element={<GroupPage category="Birds" />} />
-        <Route path="/reptiles" element={<GroupPage category="Reptiles" />} /> */}
-
-        <Route path="/:category" element={<GroupPage />} />
-
+        <Route path="/" element={<Layout />}>
+           <Route index element={<Home />} />
+           <Route path=":category" element={<GroupPage />} />
+        </Route>
       </Routes>
-      <Footer />
-    </>
   );
 }
 

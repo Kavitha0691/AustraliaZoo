@@ -7,7 +7,7 @@ const Layout = () => (
   <>
     <Header />
     <Navigation />
-    <main style={{ display: "flex" }}>
+    <main>
       <Outlet />
     </main>
     <Footer />
